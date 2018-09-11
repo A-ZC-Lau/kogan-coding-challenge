@@ -1,4 +1,11 @@
-var calculateCubicWeight
+const axios = require("axios")
+
+var 
+    calculateCubicWeight,
+    createUrl,
+    getData
+
+
 
 calculateCubicWeight = function(x, y, z)
 {
@@ -10,3 +17,21 @@ calculateCubicWeight = function(x, y, z)
     return +(result.toString())
 }
 module.exports.calculateCubicWeight = calculateCubicWeight
+
+
+
+createUrl = function(path)
+{
+    const base_url = "http://wp8m3he1wt.s3-website-ap-southeast-2.amazonaws.com"
+    return base_url + path
+}
+module.exports.createUrl = createUrl
+
+
+
+async function getData(link)
+{
+    const result = await axios.get(link)
+    return result
+}
+module.exports.getData = getData
