@@ -11,11 +11,10 @@ run(category)
 async function run(category)
 {
     const data = []
-    
     let path = "/api/products/1"
     let url = createUrl(path)
+
     do {
-        
         let response, result
         try 
         {
@@ -27,7 +26,9 @@ async function run(category)
             console.error(error)    
         }
         
+        // filter elements only based on category match
         let filtered_results = result.objects.filter( element => element.category === category)
+        // adding the "average cubic weight" to the object itself
         for (let element of filtered_results)
         {
             let all_sizes = Object.values(element.size)
