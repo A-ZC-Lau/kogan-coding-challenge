@@ -4,6 +4,7 @@
   "description": "kogan's coding challenge",
   "main": "run.js",
   "scripts": {
+    "start": "node run.js",
     "test": "mocha test/test.spec.js"
   },
   "keywords": [
