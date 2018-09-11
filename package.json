@@ -1,0 +1,21 @@
+{
+  "name": "kogan",
+  "version": "1.0.0",
+  "description": "kogan's coding challenge",
+  "main": "run.js",
+  "scripts": {
+    "test": "mocha test/test.spec.js"
+  },
+  "keywords": [
+    "kogan",
+    "coding",
+    "challenge"
+  ],
+  "author": "Alexander Lau",
+  "license": "ISC",
+  "devDependencies": {
+    "axios": "^0.18.0",
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0"
+  }
+}
