@@ -5,16 +5,18 @@ const {
     getData,
 } = require("./functions.js")
 
-run()
+const category = "Air Conditioners"
 
-async function run()
+run(category)
+
+async function run(category)
 {
     const data = []
     
     let path = "/api/products/1"
     let url = createUrl(path)
     do {
-        const category = "Air Conditioners"
+        
         let response, result
         try 
         {
